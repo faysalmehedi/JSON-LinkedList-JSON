@@ -14,8 +14,9 @@ with open('linked_list.json') as f:
 new_linked_list = SinglyLinkedList()
 new_data = {}
 
-for i in range(len(data['list'])):
-    new_linked_list.push_back(data['list'][i])
+for key in data.keys():
+    for i in range(len(data[key])):
+        new_linked_list.push_back(data[key][i])
 
 p = new_linked_list.head
 i = 0
